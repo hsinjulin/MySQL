@@ -7,7 +7,7 @@ $link = mysqli_connect(
     '',  // 密碼
     'supermarket');
 
-// 從資料庫中查詢其他資料，並賦值給相應變數
+// 從資料庫中刪除其他資料
 $sql = "DELETE FROM product WHERE pID = '$id'";
 if (mysqli_query($link, $sql)){
     echo "刪除成功";

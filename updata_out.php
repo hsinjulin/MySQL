@@ -1,5 +1,5 @@
 <?php
-// 抓product.sql中的pID->去查詢同列資料
+// 抓product.sql中的pID->去更新同列資料
 $id=$_POST['pID'];
 $newPrice=$_POST['pPrice'];
 $link = mysqli_connect( 
@@ -7,7 +7,7 @@ $link = mysqli_connect(
     'root',       // 使用者名稱 
     '',  // 密碼
     'supermarket');
-// 從資料庫中查詢其他資料，並賦值給相應變數
+// 從資料庫中更新其他資料，並賦值給相應變數
 $sql = "UPDATE product SET pPrice='$newPrice' WHERE pID = '$id'";
 $result = mysqli_query($link, $sql);
 if ($result->num_rows > 0) {
