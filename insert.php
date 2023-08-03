@@ -4,11 +4,7 @@
     $price=$_POST['price'];
     $time=$_POST['time'];
 
-    $link = @mysqli_connect( 
-        'localhost',  // MySQL主機名稱 
-        'root',       // 使用者名稱 
-        '',  // 密碼
-        'supermarket');
+    require_once 'db_connect.php';
         
     $sql = "insert into product values('".$id."','".$abute."','".$price."','".$time."')";
     echo $sql."<br/>";

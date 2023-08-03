@@ -18,11 +18,7 @@
         <?php
           // 抓product.sql中的pID->去查詢同列資料
           $id=$_POST['pID'];
-          $link = mysqli_connect( 
-              'localhost',  // MySQL主機名稱 
-              'root',       // 使用者名稱 
-              '',  // 密碼
-              'supermarket');
+          require_once 'db_connect.php';
               
           $sql = "SELECT pID FROM product";
           $result = mysqli_query($link, $sql);

@@ -2,11 +2,7 @@
 // 抓product.sql中的pID->去更新同列資料
 $id=$_POST['pID'];
 $newPrice=$_POST['pPrice'];
-$link = mysqli_connect( 
-    'localhost',  // MySQL主機名稱 
-    'root',       // 使用者名稱 
-    '',  // 密碼
-    'supermarket');
+require_once 'db_connect.php';
 // 從資料庫中更新其他資料，並賦值給相應變數
 $sql = "UPDATE product SET pPrice='$newPrice' WHERE pID = '$id'";
 $result = mysqli_query($link, $sql);

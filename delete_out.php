@@ -1,11 +1,7 @@
 <?php
 // 抓product.sql中的pID->去刪除同列資料
 $id=$_POST['pID'];
-$link = mysqli_connect( 
-    'localhost',  // MySQL主機名稱 
-    'root',       // 使用者名稱 
-    '',  // 密碼
-    'supermarket');
+require_once 'db_connect.php';
 
 // 從資料庫中刪除其他資料
 $sql = "DELETE FROM product WHERE pID = '$id'";
